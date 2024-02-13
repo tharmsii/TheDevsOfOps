@@ -1,0 +1,17 @@
+#A playbook to update and upgrade an ubuntu server
+---
+
+ - name: create file
+   hosts: webservers
+   remote_user: ppavon
+
+   tasks: 
+    
+   name: create txt file
+    shell: echo "This is a small text file." > ~/small.txt
+   name: append to the txt file
+   shell: echo "Another brick in the fall." >> ~/small.txt 
+   name: date the file
+   raw: date >> ~/small.txt
+
+...
