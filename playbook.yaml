@@ -1,0 +1,15 @@
+#A playbook to update and upgrade an ubuntu server
+
+---
+name: Update all
+hosts: webservers
+remote_user: thomas
+become: yes
+
+  tasks:
+  
+name: update then upgrade
+  apt:
+    update_cache: yes
+    upgrade: yes
+...
